@@ -5,22 +5,22 @@ export const Header = ({ page, setPage }) => {
     <header>
       <h1>
         <p>+</p> questions
-        <a
-          href="/#"
-          className="questions-favorited"
+        <span
+          href='/#'
+          className='questions-favorited'
           id={page ? 'selected' : ''}
           onClick={() => setPage(1)}
         >
           favorited
-        </a>
-        <a
-          href="/#"
-          className="questions-favorited"
+        </span>
+        <span
+          href='/#'
+          className='questions-favorited'
           id={!page ? 'selected' : ''}
           onClick={() => setPage(0)}
         >
           home
-        </a>
+        </span>
       </h1>
     </header>
   );
