@@ -17,8 +17,10 @@ export default function App() {
   const tagsList = React.useRef(null);
   const [page, setPage] = React.useState(0);
 
-  const handleQuestion = e => {
+  const handleQuestion = (e) => {
     e.preventDefault();
+    if (title.current.value.length === 0) return;
+    if (questionText.current.value.length === 0) return;
     let newTags = tagsList.current.value
       ? tagsList.current.value.split(',')
       : null;
@@ -31,21 +33,21 @@ export default function App() {
         date: new Date().toLocaleDateString('en-US', options),
         question: questionText.current.value,
         favorited: false,
-        tags: newTags
-      }
+        tags: newTags,
+      },
     ]);
     title.current.value = '';
     questionText.current.value = '';
     tagsList.current.value = '';
   };
 
-  const setFavorite = id => {
+  const setFavorite = (id) => {
     setQuestions(() =>
       questions.map((item, index) => {
         if (item.id === id)
           return {
             ...item,
-            favorited: !item.favorited
+            favorited: !item.favorited,
           };
         return item;
       })
@@ -53,10 +55,10 @@ export default function App() {
   };
 
   return (
-    <div className="App">
+    <div className='App'>
       <Header page={page} setPage={setPage} />
       <Search searchValue={searchValue} setSearchValue={setSearchValue} />
-      <hr className="divider" />
+      <hr className='divider' />
       {page ? (
         <Favorites
           searchValue={searchValue}
@@ -69,7 +71,7 @@ export default function App() {
             <h1>Recently added</h1>
             <ul>
               {filtered?.length ? (
-                filtered.map(question => (
+                filtered.map((question) => (
                   <CommentBox
                     key={question.id}
                     question={question}
@@ -83,7 +85,7 @@ export default function App() {
               )}
             </ul>
           </main>
-          <hr className="divider" />
+          <hr className='divider' />
           <AskQuestion
             handleQuestion={handleQuestion}
             title={title}
