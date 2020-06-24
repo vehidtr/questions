@@ -10,6 +10,7 @@ The application is quite simple but good enough to get your hands on Recoli. I c
 
 Since the application was created in short time the application is not fully done. 
 I would like to add some functionalities like:  
+
 0. adding response to questions (answers)
 1. users and profiles
 2. most answered questions
