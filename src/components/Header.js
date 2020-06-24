@@ -6,7 +6,6 @@ export const Header = ({ page, setPage }) => {
       <h1>
         <p>+</p> questions
         <span
-          href='/#'
           className='questions-favorited'
           id={page ? 'selected' : ''}
           onClick={() => setPage(1)}
@@ -14,7 +13,6 @@ export const Header = ({ page, setPage }) => {
           favorited
         </span>
         <span
-          href='/#'
           className='questions-favorited'
           id={!page ? 'selected' : ''}
           onClick={() => setPage(0)}

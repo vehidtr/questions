@@ -1,14 +1,16 @@
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   background: #f1f1f1;
   font-family: 'Calibri', 'Helvetica';
 }
+
 html {
   margin-left: calc(100vw - 100%);
 }
+
 /**  App **/
+
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -17,9 +19,11 @@ html {
 }
 
 /**  Header **/
+
 header {
   text-align: left;
 }
+
 header h1 {
   background: rgba(0, 0, 0, 0.6784313725490196);
   margin: 0;
@@ -37,9 +41,11 @@ header h1 p {
   margin: 0;
   color: orangered;
 }
+
 #selected {
   color: orangered;
 }
+
 .questions-favorited {
   float: right;
   font-size: 16px;
@@ -50,16 +56,20 @@ header h1 p {
   border-bottom: 1.5px solid orangered;
   transition: border-bottom 0.2s ease;
   transition: color 0.2s ease;
+  cursor: pointer;
 }
+
 /* .questions-favorited::before {
   content: '\2605';
 } */
+
 .questions-favorited:hover {
   /* color: orangered; */
   border-bottom: 1.5px solid #0fcfbe;
 }
 
 /**  Search **/
+
 .iconSearch {
   position: absolute;
   pointer-events: none;
@@ -82,12 +92,14 @@ header h1 p {
   outline-color: #0fcfbe;
   border-radius: 5px;
 }
+
 #searchIcon {
   position: absolute;
   height: 28px;
   background: #e2e2e2;
   padding-top: 7px;
 }
+
 #search:after {
   content: '\1F50D';
   vertical-align: middle;
@@ -95,6 +107,7 @@ header h1 p {
 }
 
 /**  Main **/
+
 main ul {
   text-decoration: none;
   list-style-type: none;
@@ -102,6 +115,7 @@ main ul {
 }
 
 /**  AskQuestion **/
+
 main ul li {
   background: white;
   padding: 10px;
@@ -112,6 +126,7 @@ main ul li {
   margin-bottom: 15px;
   border: 1px solid #e6e1e1;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -119,6 +134,7 @@ form {
   font-size: 1em;
   font-weight: 700;
 }
+
 form input {
   margin-bottom: 10px;
   height: 30px;
@@ -153,13 +169,16 @@ form label {
   border-radius: 5px;
   font-family: 'Calibri';
 }
+
 #question::placeholder {
   color: #afaeae;
 }
+
 .question-header {
   border-bottom: 3px solid #0fcfbe;
   padding-bottom: 5px;
 }
+
 .question-title {
   margin: 0;
   margin-bottom: 5px;
@@ -167,20 +186,24 @@ form label {
   overflow: hidden;
   white-space: nowrap;
 }
+
 .question-header p {
   padding: 0;
   margin: 0;
   font-size: 12px;
   color: gray;
 }
+
 .question-favorite {
   width: 15px;
   fill: red;
 }
+
 .question-comment {
   width: 15px;
   margin-left: 10px;
 }
+
 .question-text {
   word-break: break-word;
   color: #a0a0a0;
@@ -199,16 +222,20 @@ form label {
   transition: background 0.2s ease;
   font-size: 1.2em;
 }
+
 #question-submit:hover {
   background: #0cb3a4;
 }
+
 .question-footer {
   display: flex;
   justify-content: space-between;
 }
+
 #title::placeholder {
   color: #afaeae;
 }
+
 .tag {
   background: #e1ecf4;
   color: #39739d;
@@ -225,6 +252,7 @@ form label {
   border-style: solid;
   border-radius: 3px;
 }
+
 .character-count {
   position: relative;
   margin-top: -27px;
@@ -235,6 +263,7 @@ form label {
   font-weight: 500;
   color: #b9b9b9;
 }
+
 svg {
   cursor: pointer;
 }
