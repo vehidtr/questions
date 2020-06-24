@@ -1,5 +1,5 @@
-# questions
-Small project using React and Recoil.
+# Description
+Small project using React and Recoil called +questions.
 
 While I was on vacation, I've decided to play a bit more with Recoil, since I liked the presentation of Recoil on React Europe 2020.
 So I created small project with it, with small usage and logic of Recoil, atoms and selectors.
